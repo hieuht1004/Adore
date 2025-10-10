@@ -388,5 +388,41 @@
         <a href="https://adore.vn/" target="_blank">www.adore.vn</a>
       </div>
     </footer>
+    <script>
+document.querySelector(".lp_button").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.querySelectorAll("input")[0].value,
+    email: document.querySelectorAll("input")[1].value,
+    phone: document.querySelectorAll("input")[2].value,
+    address: document.querySelectorAll("input")[3].value,
+    area: document.querySelectorAll("input")[4].value,
+    retail: document.querySelectorAll("input[type=checkbox]")[0].checked,
+    fashion: document.querySelectorAll("input[type=checkbox]")[1].checked,
+    extraBusiness: document.querySelectorAll("input[type=checkbox]")[2].checked,
+    ownBusiness: document.querySelectorAll("input[type=checkbox]")[3].checked,
+    investOnly: document.querySelectorAll("input[type=checkbox]")[4].checked
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbweDGRSGkJrjRjDvQKLEECSXiaVG8sVwjPAbUSbgiDwYw98qv2DaqboKhieFThIYS7g/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Đã gửi thông tin thành công! Cảm ơn bạn.");
+    document.querySelector("form").reset();
+  })
+  .catch(err => {
+    alert("Gửi thất bại, vui lòng thử lại!");
+    console.error(err);
+  });
+});
+</script>
+
   </body>
 </html>
