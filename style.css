@@ -1,0 +1,463 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li, ol {
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+}
+button, input, a {
+    border: none;
+    outline: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: #111;
+    font-size: 16px;
+}
+.serif {
+    font-family: "Playfair Display", serif;
+    letter-spacing: -2px;
+}
+.serif.m {
+    font-weight: 500;
+}
+.serif.b {
+    font-weight: 700;
+}
+
+/* 01 text style - pending */
+h1 {
+    font-size: 5.25rem;
+    letter-spacing: -2px;
+}
+h2 {
+    font-size: 4rem;
+    letter-spacing: -1px;
+}
+h4 {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.up {
+    text-transform: uppercase;
+}
+
+/* spacing - pending */
+
+
+/* card style */
+.card01 {
+    display: inline-block;
+}
+.card01 img {
+    border-radius: 1.5rem;
+}
+.card01 h4 {
+    margin: 1.5rem 0 .5rem 0;
+}
+.card01 h6 {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.card02 h6 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 0 .5rem 0;
+}
+.card03 {
+   display: flex;
+   flex-direction: column; 
+}
+.card03 img {
+    margin-bottom: 1rem;
+}
+.card03 h4 {
+    margin-bottom: .5rem;
+}
+.card04 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    background: #DA7726;
+    color: white;
+    gap: 1rem;
+}
+.card04 strong {
+    font-size: 64px;
+    font-weight: 700;
+}
+.card04 span {
+    font-size: 20px;
+}
+.card05 {
+    
+}
+.card06 {
+    
+}
+
+/* section */
+.s01 {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.s01 .logo {
+    display: inline-block;
+    padding: 6rem 0;
+}
+.s01 h2 {
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.s01 h2 strong {
+    font-weight: 700;
+}
+.s01 h6 {
+    font-weight: 400;
+    margin-bottom: 6rem;
+    max-width: 720px;
+}
+.s02 {
+    margin-top: -6rem;
+}
+.s03 {
+    display: grid;
+    justify-items: center;
+}
+.s03 .cardblock {
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 6rem 0;
+    width: 100%;
+}
+.s04 {
+    display: grid;
+    justify-items: center;
+    padding: 6rem 0;
+}
+.s04 .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1360px;
+    padding: 7.5rem 0;
+}
+.s04 .main .block {
+    display: grid;
+    align-content: space-around;
+    grid-template-rows: repeat(3, 1fr);
+}
+.s04 .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 6rem 0;
+    max-width: 1360px;
+}
+.s04 .list .item {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+.s04 .list .item h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.s04 .list .item h6 {
+    text-align: center;
+    font-weight: 400;
+    display: inline-block;
+}
+.s04 .list .div2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.s04 .list .div3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    border-bottom: none;
+}
+.s04 .list .div4 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.s04 .list .div5 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+.s04 .list .div6 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    
+}
+.s04 .list .div7 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+.s04 .list .div7 p i {
+    display: inline-block;
+    width: 100%;
+    padding-right: 1rem;
+    border-right: 4px solid #DA7726;
+}
+
+.s05 .title {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+.s05 .title h3 {
+    font-weight: 400;
+}
+.s05 .storelist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+.s05 .storelist .div6 {
+    grid-column: span 3 / span 3;
+}
+.s05 .storelist .div6 img {
+    height: 492px;
+}
+.s06 {
+    display: grid;
+}
+.s07 .s0701 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+.s07 .s0701 .div1 {
+    grid-column: span 9 / span 9;
+}
+.s07 .s0701 .div2 {
+    grid-column: span 3 / span 3;
+    grid-column-start: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+.s07 .s0701 .div2 h6 {
+    font-weight: 400;
+}
+.s07 .s0702 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+.s07 .s0702 .title {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.s08 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.s09 {
+    margin: 0 auto;
+    max-width: 1360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 6rem 0;
+}
+.s09 h6 {
+    max-width: 720px;
+}
+.s010 {
+    
+}
+.s11 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.s11 .l {
+    padding: 6rem;
+    display: grid;
+    align-content: center;
+    gap: 1.5rem;
+}
+.s11 .l ul li h6 {
+    display: inline-block;
+    padding: 2rem 0 2rem 3.5rem;
+    background: url(/assets/ic03-check.png) center left no-repeat;
+}
+.s12 {
+    
+}
+.s13 {
+    display: grid;
+    justify-items: center;
+}
+.s14 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.s14 .r {
+    display: grid;
+    gap: 3rem;
+}
+.s14 .r .title {
+    display: grid;
+    gap: 1.5rem;
+    text-align: right;
+}
+.s14 .r ul li h6 {
+    text-align: right;
+    padding: 2rem 0;
+    border-bottom: 1px solid #DA7726;
+    position: relative;
+}
+.s14 .r ul li h6::before {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #DA7726;
+    letter-spacing: -2px;
+}
+.s14 .r ul li:nth-child(1) h6::before {
+    content: "01";
+}
+.s14 .r ul li:nth-child(2) h6::before {
+    content: "02";
+}
+.s14 .r ul li:nth-child(3) h6::before {
+    content: "03";
+}
+.s15 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 6rem 0;
+}
+.s15 .l {
+    padding: 2rem 4rem;
+    display: grid;
+    gap: 2rem;
+}
+.s15 .l .title {
+    display: grid;
+    gap: 1rem;
+}
+.s15 .l h4 {
+    font-weight: 400;
+}
+.s15 .l form {
+    display: grid;
+    gap: 1.5rem;
+}
+.forminline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.s15 .l form .forminput {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.s15 .l form .forminput label span {
+    color: red;
+}
+.s15 .l form .forminput input {
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all ease .3s;
+}
+.s15 .l form .forminput input:focus {
+    background: rgba(218, 119, 38, 0.2);
+    border: 1px solid rgba(218, 119, 38, 0.4);;
+}
+.s15 .l form .checkboxlist {
+    display: grid;
+    gap: 1rem;
+}
+
+/* component style (button, input) - pending */
+.lp_button {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 100%;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 1rem;
+    color: white;
+    background: #DA7726;
+    padding: 1.25rem 2.5rem;
+    text-align: center;
+}
+footer {
+    background: #111;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 4rem;
+    justify-items: center;
+    align-items: center;
+}
+footer .box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+footer .box a {
+    color: #DA7726;
+}
+footer .box.h {
+    padding-left: 56px;
+    background: url(assets/ic02a.png) center left no-repeat;
+    background-size: 40px;
+}
+footer .box.w {
+    padding-left: 56px;
+    background: url(assets/ic02b.png) center left no-repeat;
+    background-size: 40px;
+}
+
