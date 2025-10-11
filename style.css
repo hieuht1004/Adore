@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
 ul, li, ol {
     list-style-type: none;
 }
@@ -13,17 +17,17 @@ img {
 button, input, a {
     border: none;
     outline: none;
+    cursor: pointer;
 }
 body {
     margin: 0;
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
     color: #111;
-    font-size: 16px;
 }
 .serif {
     font-family: "Playfair Display", serif;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
 }
 .serif.m {
     font-weight: 500;
@@ -32,7 +36,7 @@ body {
     font-weight: 700;
 }
 
-/* 01 text style - pending */
+/* 01 text style */
 h1 {
     font-size: 5.25rem;
     letter-spacing: -2px;
@@ -52,7 +56,6 @@ h6 {
     text-transform: uppercase;
 }
 
-/* spacing - pending */
 
 
 /* card style */
@@ -100,19 +103,41 @@ h6 {
 .card04 span {
     font-size: 20px;
 }
-.card05 {
-    
-}
 .card06 {
-    
+    background: #E39759;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, z-index 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    padding: 6rem 3rem;
+    text-align: center;
+}
+.card06 h2 {
+    font-size: 1.75rem;
+}
+.card06 h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 /* section */
 .s01 {
+    background: linear-gradient(#FEFBF2, #fff);
+    position: relative;
+    z-index: 1;
+}
+.s01 .container {
     display: grid;
     justify-items: center;
     text-align: center;
-    max-width: 1400px;
+    max-width: 1360px;
     margin: 0 auto;
 }
 .s01 .logo {
@@ -250,6 +275,53 @@ h6 {
 }
 .s06 {
     display: grid;
+    padding: 6rem 0;
+}
+.s06 .title {
+    display: grid;
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+}
+.s06 .cate {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.s06 .cate .categories h6 {
+    display: inline-block;
+}
+.s06 .hozscroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-left: 10rem;
+    padding-bottom: 2rem;
+}
+/* Phần track (nền thanh cuộn) */
+.s06 .hozscroll::-webkit-scrollbar {
+  height: 8px; /* độ cao của thanh cuộn ngang */
+}
+
+/* Phần background của thanh cuộn */
+.s06 .hozscroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Phần thumb (thanh di chuyển) */
+.s06 .hozscroll::-webkit-scrollbar-thumb {
+  background: #DA7726;
+}
+
+/* Hover vào thumb */
+.s06 .hozscroll::-webkit-scrollbar-thumb:hover {
+  /* background: #666; */
+  cursor: pointer;
 }
 .s07 .s0701 {
     display: grid;
@@ -275,7 +347,7 @@ h6 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem 6rem 1.5rem;
 }
 .s07 .s0702 .title {
     padding: 0 2rem;
@@ -301,13 +373,46 @@ h6 {
 .s09 h6 {
     max-width: 720px;
 }
-.s010 {
-    
+.s10 .title {
+    display: grid;
+    gap: 1rem;
+    margin: 0 auto;
+    text-align: center;
 }
+.s10 .title h4 {
+    font-weight: 400;
+}
+.s10 .investment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 48px;
+    max-width: 1360px;
+    margin: 6rem auto;
+}
+.s10 .investment-grid .card2 {
+  transform: translateY(30%);
+}
+.s10 .investment-grid .card4 {
+  transform: translateX(55%);
+  margin-top: 6rem;
+}
+.s10 .investment-grid .card5 {
+    margin-top: 6rem;
+    grid-column-start: 3;
+    transform: translateX(-55%);
+}
+.s10 .action {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .s11 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    margin: 6rem 0;
 }
 .s11 .l {
     padding: 6rem;
@@ -320,8 +425,47 @@ h6 {
     padding: 2rem 0 2rem 3.5rem;
     background: url(/assets/ic03-check.png) center left no-repeat;
 }
-.s12 {
-    
+.s12 .title {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 6rem;
+}
+.s12 .title h4 {
+    font-weight: 400;
+}
+
+
+.s12 .card-stack-horizontal {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 0;
+  max-width: 1360px;
+  width: 100%;
+  margin: 100px auto;
+  position: relative;
+}
+.s12 .card-stack-horizontal .card:not(:first-child) {
+  margin-left: -50px;
+}
+.s12 .card-stack-horizontal .card:first-child {
+  transform: scale(1.2);
+  z-index: 5;
+  background: #DA7726;
+}
+.s12 .card-stack-horizontal:hover .card:first-child {
+  transform: scale(1);
+  z-index: 1;
+  background: #E39759;
+}
+.s12 .card-stack-horizontal .card:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  background: #DA7726;
+}
+.s12 .card-stack-horizontal .card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
 }
 .s13 {
     display: grid;
@@ -332,6 +476,7 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    padding: 6rem 0;
 }
 .s14 .r {
     display: grid;
@@ -373,7 +518,6 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    padding: 6rem 0;
 }
 .s15 .l {
     padding: 2rem 4rem;
@@ -420,7 +564,7 @@ h6 {
     gap: 1rem;
 }
 
-/* component style (button, input) - pending */
+/* component style (button, input) */
 .lp_button {
     font-size: 2rem;
     display: inline-block;
@@ -459,5 +603,25 @@ footer .box.w {
     padding-left: 56px;
     background: url(assets/ic02b.png) center left no-repeat;
     background-size: 40px;
+}
+
+/* 
+    MOBILE RESPONSIVE
+*/
+
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+  .s10 .investment-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .s10 .investment-grid .card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
 }
 
