@@ -171,6 +171,9 @@ h6 {
     padding: 6rem 0;
     width: 100%;
 }
+.s03 .action {
+    z-index: 1;
+}
 .s04 {
     display: grid;
     justify-items: center;
@@ -263,7 +266,7 @@ h6 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 16px;
+    gap: 1rem;
     max-width: 1360px;
     margin: 0 auto;
 }
@@ -434,8 +437,6 @@ h6 {
 .s12 .title h4 {
     font-weight: 400;
 }
-
-
 .s12 .card-stack-horizontal {
   display: grid;
   grid-auto-flow: column;
@@ -470,6 +471,8 @@ h6 {
 .s13 {
     display: grid;
     justify-items: center;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 .s14 {
     display: grid;
@@ -518,6 +521,7 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    margin-bottom: 4rem;
 }
 .s15 .l {
     padding: 2rem 4rem;
@@ -576,6 +580,7 @@ h6 {
     background: #DA7726;
     padding: 1.25rem 2.5rem;
     text-align: center;
+    transition: all ease .3s;
 }
 footer {
     background: #111;
@@ -606,21 +611,266 @@ footer .box.w {
 }
 
 /* 
+    HOVER & ANIMATION
+*/
+.lp_button:hover {
+    opacity: .9;
+    animation: animatescaleup 1s ease-in-out infinite;
+}
+@keyframes animatescaleup {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+@keyframes animatesflipup {
+    0% {
+    transform: rotateY(0deg) scale(1);
+    }
+    10% {
+    transform: rotateY(180deg) scale(1.2);
+    }
+    20% {
+    transform: rotateY(0deg) scale(1);
+    }
+    100% {
+    transform: rotateY(0deg);
+    }
+}
+.card01 img {
+    animation: animatesflipup 5s ease-in-out infinite;
+}
+
+/* 
     MOBILE RESPONSIVE
 */
 @media (max-width: 768px) {
     html {
         font-size: 12px;
     }
+    h1 {
+        font-size: 3.25rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    .lp_button {
+        font-size: 1.5rem;
+    }
+    .s01,
+    .s03 {
+        padding: 0 1rem;
+    }
+    .s01 h2 {
+        font-size: 3rem;
+    }
+    .s02 {
+        margin-top: 0;
+    }
+    .s03 .cardblock {
+        gap: 1rem;
+    }
+    .s03 .cardblock .card01 img {
+        width: 56px;
+    }
+    .s04 {
+        padding: 4rem 1rem;
+    }
+    .s04 .list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+    .s04 .list .item,
+    .s04 .list .div4 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+    .s04 .list .div7 {
+        grid-row: auto !important;
+        grid-column: 1 / -1;
+        height: fit-content;
+        padding: 2rem 0;
+    }
+    .s04 .list .item {
+        padding: 0;
+    }
+    .s04 .list .div4 {
+        display: grid;
+        justify-items: center;
+    }
+    .s04 .list .div4 img {
+        height: 240px;
+    }
+    .s04 .list .div3 {
+        border-bottom: 1px solid black !important;
+    }
+    .s05 {
+        padding: 0 1rem;
+    }
+    .s05 .storelist {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+    .s05 .storelist .div5 {
+        grid-column: span 2 / span 2;
+    }
+    .s05 .storelist .div6 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 4;
+    }
+    .s05 .storelist .div5 img {
+        width: 100%;
+    }
+    .s05 .storelist .div6 img {
+        height: auto;
+    }
+    .s05 .storelist .card02:nth-child(1),
+    .s05 .storelist .card02:nth-child(2),
+    .s05 .storelist .card02:nth-child(3),
+    .s05 .storelist .card02:nth-child(4) {
+        height: fit-content;
+    }
+    .s06 {
+        padding: 3rem 1rem;
+    }
+    .s06 .cate {
+        gap: 3rem;
+    }
+    .s06 .hozscroll {
+        margin-left: 0;
+    }
+    .s06 .hozscroll img {
+        width: 240px;
+    }
+    .s07 .s0701 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+    }        
+    .s07 .s0701 .div1 {
+        grid-column: span 2 / span 2;
+    }
+    .s07 .s0701 .div2 {
+        grid-column-start: 3;
+        padding: 0 1rem;
+    }
+    .s07 .s0702 {
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .s08 {
+        gap: 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .card04 {
+        gap: 0;
+    }
+    .card04 strong {
+        font-size: 36px;
+    }
+    .s09 {
+        padding: 6rem 1rem;
+    }
+    
   .s10 .investment-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 3rem 0;
   }
   .s10 .investment-grid .card {
-    grid-column: auto !important;
-    grid-row: auto !important;
+    grid-column: auto;
+    grid-row: auto;
     transform: none !important;
     margin: 0 !important;
+    height: fit-content;
   }
+  .s10 .investment-grid .card5 {
+     grid-column: span 2 / span 2;
+  }
+.s11 {
+    grid-template-columns: 1fr;
+}
+.s11 .l {
+    padding: 1rem 3rem;
+}
+.s11 .l ul li h6 {
+    padding-left: 4rem;
+}
+.s11 h4 {
+    font-size: 24px;
+    text-align: center;
+}
+.s12 .card-stack-horizontal {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem;
+    margin-top: 0;
+}
+.card06 {
+    padding: 2rem;
+}
+.s12 .card-stack-horizontal .card:not(:first-child){
+    margin-left: 0;
+}
+.s12 .title {
+    margin-bottom: 2rem;
+}
+.s14 {
+    grid-template-columns: 1fr;
+}
+.s14 .r {
+    margin-top: 2rem;
+}
+.s14 .r ul li h6 {
+    padding-left: 4rem;
+}
+.s15 {
+    font-size: 15px;
+    grid-template-columns: 1fr;
+    margin-bottom: -1rem;
+}
+.s15 .l {
+    padding: 2rem;
+}
+.s15 .l .action button {
+    display: inline-block;
+    width: 100%;
+}
+.s15 .l h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.s15 .r img {
+    width: 100%;
+}
+footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem 1rem;
+}
+footer .box.l {
+    grid-column: span 2 / span 2;
+    padding: 2rem 0 1rem 0;
+}
+
+footer .box.h {
+    grid-row-start: 2;
+}
+
+footer .box.w {
+    grid-row-start: 2;
+}
+
 }
 
