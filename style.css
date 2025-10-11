@@ -426,7 +426,7 @@ h6 {
 .s11 .l ul li h6 {
     display: inline-block;
     padding: 2rem 0 2rem 3.5rem;
-    background: url(/assets/ic03-check.png) center left no-repeat;
+    background: url(assets/ic03-check.png) center left no-repeat;
 }
 .s12 .title {
     text-align: center;
