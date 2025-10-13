@@ -165,7 +165,7 @@ h6 {
 }
 .s03 .cardblock {
     display: grid;
-    max-width: 1440px;
+    max-width: 1360px;
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
     padding: 6rem 0;
@@ -643,6 +643,39 @@ footer .box.w {
 .card01 img {
     animation: animatesflipup 5s ease-in-out infinite;
 }
+.desktophidden {
+    display: none;
+}
+#toast {
+  position: fixed;
+  top: 40px;
+  left: calc(50% - 0px);
+  width: 400px;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+#toast.success {
+  background: #2e7d32;
+}
+
+#toast.error {
+  background: #b71c1c;
+}
 
 /* 
     MOBILE RESPONSIVE
@@ -660,6 +693,12 @@ footer .box.w {
     h4 {
         font-size: 1.25rem;
     }
+    .mobilehidden {
+        display: none;
+    }
+    .desktophidden {
+        display: inline-block;
+    }
     .lp_button {
         font-size: 1.5rem;
     }
@@ -668,7 +707,7 @@ footer .box.w {
         padding: 0 1rem;
     }
     .s01 h2 {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     .s02 {
         margin-top: 0;

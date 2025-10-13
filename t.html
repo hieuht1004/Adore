@@ -476,6 +476,9 @@
             <button type="submit" class="lp_button">Đăng ký nhận tư vấn</button>
           </div>
         </form>
+        <button type="button" onclick="showToast('Gửi thành công! Cám ơn bạn đã đăng ký nhận thông tin! Adore sẽ liên hệ lại trong thời gian gần nhất.', 'success')">
+  Test Toast
+</button>
         <script>
             function showToast(message, type = "success") {
                 const toast = document.getElementById("toast");
@@ -484,10 +487,10 @@
 
                 setTimeout(() => {
                 toast.className = toast.className.replace("show", "");
-                }, 5000);
+                }, 4000);
             }
-
-          document          
+          document
+          
             .getElementById("regForm")
             .addEventListener("submit", function (e) {
               e.preventDefault();
