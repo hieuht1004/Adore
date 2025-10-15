@@ -650,7 +650,7 @@ footer .box.w {
 }
 #toast {
   position: fixed;
-  bottom: 40px;
+  top: 40px;
   left: calc(50% - 0px);
   width: 400px;
   transform: translateX(-50%) translateY(20px);
@@ -899,6 +899,9 @@ footer .box.w {
 .s15 .l form .forminput input {
     font-size: 16px;
     width: 100%;
+}
+#toast {
+  top: calc(env(safe-area-inset-top, 0px) + 24px);
 }
 footer {
     grid-template-columns: repeat(2, 1fr);
