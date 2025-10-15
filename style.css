@@ -24,6 +24,8 @@ body {
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
     color: #111;
+    width: 100%;
+    position: relative;
 }
 .serif {
     font-family: "Playfair Display", serif;
