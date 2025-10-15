@@ -650,7 +650,7 @@ footer .box.w {
 }
 #toast {
   position: fixed;
-  top: 40px;
+  bottom: 40px;
   left: calc(50% - 0px);
   width: 400px;
   transform: translateX(-50%) translateY(20px);
