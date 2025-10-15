@@ -896,6 +896,10 @@ footer .box.w {
 .s15 .r img {
     width: 100%;
 }
+.s15 .l form .forminput input {
+    font-size: 16px;
+    width: 100%;
+}
 footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
